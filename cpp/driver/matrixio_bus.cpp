@@ -106,7 +106,7 @@ bool MatrixIOBus::GetMatrixName() {
   if (!Read(kConfBaseAddress, (unsigned char *)&data, sizeof(data)))
     return false;
   matrix_name_ = data[0];
-  if (matrix_name_ == kMatrixCreator)
+  if (matrix_name_ == kMatrixCreator || matrix_name_ == kMatrixCreatorNew)
     matrix_leds_ = kMatrixCreatorNLeds;
   else if (matrix_name_ == kMatrixVoice)
     matrix_leds_ = kMatrixVoiceNLeds;

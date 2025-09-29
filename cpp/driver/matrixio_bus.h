@@ -30,6 +30,7 @@ const int kMatrixCreatorNLeds = 35;
 const int kMatrixVoiceNLeds = 18;
 const int kMatrixCreator = 0x05C344E8;
 const int kMatrixVoice = 0x6032BAD2;
+const int kMatrixCreatorNew = 0x67452301;
 
 class MatrixIOBus {
  public:
