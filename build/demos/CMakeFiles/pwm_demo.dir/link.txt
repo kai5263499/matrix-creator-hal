@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/pwm_demo.dir/pwm_demo.cpp.o  -o pwm_demo  -Wl,-rpath,/home/pi/matrix-creator-hal/build/demos/driver driver/libmatrix_creator_hal.so -lpthread -lfftw3f -lwiringPi -lwiringPiDev -lcrypt 

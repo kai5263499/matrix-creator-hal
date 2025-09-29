@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/audio_output.dir/audio_output.cpp.o  -o audio_output  -Wl,-rpath,/home/pi/matrix-creator-hal/build/demos/driver driver/libmatrix_creator_hal.so -lpthread -lgflags -lfftw3f -lwiringPi -lwiringPiDev -lcrypt 

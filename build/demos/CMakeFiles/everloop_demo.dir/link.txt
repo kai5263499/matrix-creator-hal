@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/everloop_demo.dir/everloop_demo.cpp.o  -o everloop_demo  -Wl,-rpath,/home/pi/matrix-creator-hal/build/demos/driver driver/libmatrix_creator_hal.so -lpthread -lfftw3f -lwiringPi -lwiringPiDev -lcrypt 

@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/direction_of_arrival_demo_direct.dir/direction_of_arrival_demo_direct.cpp.o  -o direction_of_arrival_demo_direct  -Wl,-rpath,/home/pi/matrix-creator-hal/build/demos/driver driver/libmatrix_creator_hal.so -lpthread -lwiringPi -lwiringPiDev -lcrypt -lfftw3f -lgflags 

@@ -1,0 +1,20 @@
+--- a/cpp/driver/matrixio_bus.cpp
++++ b/cpp/driver/matrixio_bus.cpp
+@@ -45,7 +45,7 @@ bool MatrixIOBus::Init() {
+ 
+   Bus *bus_kernel = new BusKernel();
+ 
+-  if (bus_direct->Init()) {
++  if (bus_kernel->Init()) {
+     bus_driver_ = bus_direct;
+     direct_nkernel_ = true;
+     delete bus_kernel;
+@@ -55,7 +55,7 @@ bool MatrixIOBus::Init() {
+     direct_nkernel_ = false;
+     delete bus_direct;
+     std::cout << "INFO: [/dev/matrixio_regmap] was opened" << std::endl;
+-  } else {
++  } else if (bus_direct->Init()) {
+     delete bus_kernel;
+     delete bus_direct;
+     std::cerr << "can't open any device" << std::endl;

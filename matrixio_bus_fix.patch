@@ -1,0 +1,18 @@
+--- cpp/driver/matrixio_bus.cpp.backup
++++ cpp/driver/matrixio_bus.cpp
+@@ -41,8 +41,15 @@
+ bool MatrixIOBus::Init() {
+   if (bus_driver_) delete bus_driver_;
+ 
++  // Check if we have new kernel modules (regmap available, spidev0.0 missing)
++  bool has_regmap = (access("/dev/matrixio_regmap", F_OK) == 0);
++  bool has_spidev = (access("/dev/spidev0.0", F_OK) == 0);
++  bool prefer_kernel = has_regmap && !has_spidev;
++
+   Bus *bus_direct = new BusDirect();
+   Bus *bus_kernel = new BusKernel();
++
++  if (prefer_kernel && bus_kernel->Init()) {
+   
+   if (bus_direct->Init()) {
+     bus_driver_ = bus_direct;

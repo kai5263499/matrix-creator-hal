@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/compass_demo.dir/compass_demo.cpp.o  -o compass_demo  -Wl,-rpath,/home/pi/matrix-creator-hal/build/demos/driver driver/libmatrix_creator_hal.so -lpthread -lfftw3f -lwiringPi -lwiringPiDev -lcrypt 

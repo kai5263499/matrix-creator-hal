@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/micarray_raw_recorder_direct.dir/micarray_raw_recorder_direct.cpp.o  -o micarray_raw_recorder_direct  -Wl,-rpath,/home/pi/matrix-creator-hal/build/demos/driver driver/libmatrix_creator_hal.so -lpthread -lwiringPi -lwiringPiDev -lcrypt -lgflags -lfftw3f -lwiringPi -lwiringPiDev -lcrypt 

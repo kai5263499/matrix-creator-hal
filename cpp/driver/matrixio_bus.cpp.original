@@ -28,7 +28,6 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <unistd.h>
-#include <unistd.h>
 #include <iostream>
 #include <string>
 #include "cpp/driver/bus_direct.h"
@@ -56,7 +55,6 @@ bool MatrixIOBus::Init() {
 
   Bus *bus_kernel = new BusKernel();
 
-// For new kernel modules, try kernel interface first if regmap exists and spidev0.0 is missing  if (access("/dev/matrixio_regmap", F_OK) == 0 && access("/dev/spidev0.0", F_OK) != 0) {    if (bus_kernel->Init()) {      bus_driver_ = bus_kernel;      direct_nkernel_ = false;      delete bus_direct;      std::cout << "INFO: [/dev/matrixio_regmap] was opened" << std::endl;    } else {      delete bus_kernel;      delete bus_direct;      std::cerr << "can't open any device" << std::endl;      return false;    }  } else
   if (bus_direct->Init()) {
     bus_driver_ = bus_direct;
     direct_nkernel_ = true;

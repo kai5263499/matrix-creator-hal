@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/mic_demo_direct.dir/mic_demo_direct.cpp.o  -o mic_demo_direct  -Wl,-rpath,/home/pi/matrix-creator-hal/build/demos/driver driver/libmatrix_creator_hal.so -lpthread -lwiringPi -lwiringPiDev -lcrypt -lgflags -lfftw3f -lwiringPi -lwiringPiDev -lcrypt 
